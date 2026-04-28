@@ -17,8 +17,9 @@ def final_project():
     attempt_count = 0
     attempt_record = []
     guess = None
+    maximum_attempts = 10
 
-    while guess != target_num: 
+    while guess != target_num and attempt_count < max_attempts: 
       guess = input("Enter your guess: ")
       if guess.isdigit():
         guess = int(guess)
@@ -33,6 +34,10 @@ def final_project():
           print("Congratulations! You got it in", attempt_count, "attempts.")
       else:
         print("Enter a valid number")
+
+    if guess != target_num:
+      print("You're all out of attempts! The number was", target_num)
+      print("Your guesses:", attempt_record)
 
     play = input("Play again? yes/no: ")
   
