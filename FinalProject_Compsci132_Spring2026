@@ -3,4 +3,12 @@ play = "yes"
 while play == "yes"
   print("\nChoose difficulty: easy/medium/hard")
   difficulty = input("Enter difficulty: ")
-  
+  if difficulty == "easy":
+    maximum_num = 50
+  if difficulty == "medium":
+    maximum_num = 100
+  if difficulty == "hard":
+    maximum_num = 200
+
+target_num = random.randint(1, max_num)
+attempt_count = 0
