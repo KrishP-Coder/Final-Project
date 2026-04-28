@@ -12,3 +12,23 @@ while play == "yes"
 
 target_num = random.randint(1, max_num)
 attempt_count = 0
+attempt_record = []
+guess = None
+
+while guess != target_num: 
+  guess = input("Enter your guess: ")
+  if guess.isdigit():
+    attempt_count += 1
+    attempt_record.append(guess)
+
+    if guess > target_num:
+      print("Too high!")
+    elif guess < target_num:
+      print("Too low!")
+    else:
+      print("Correct! You got it in", attempts, "attempts.")
+  else:
+    print("Enter a valid number")
+
+play = input("Play again? yes/no: ")
+  
