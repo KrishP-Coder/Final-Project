@@ -33,5 +33,5 @@ while play == "yes":
     else:
       print("Enter a valid number")
 
-play = input("Play again? yes/no: ")
+  play = input("Play again? yes/no: ")
   
