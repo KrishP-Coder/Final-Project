@@ -12,26 +12,26 @@ while play == "yes":
   else:
     print("Invalid Difficulty")
 
-target_num = random.randint(1, maximum_num)
-attempt_count = 0
-attempt_record = []
-guess = None
+  target_num = random.randint(1, maximum_num)
+  attempt_count = 0
+  attempt_record = []
+  guess = None
 
-while guess != target_num: 
-  guess = input("Enter your guess: ")
-  if guess.isdigit():
-    guess = int(guess)
-    attempt_count += 1
-    attempt_record.append(guess)
+  while guess != target_num: 
+    guess = input("Enter your guess: ")
+    if guess.isdigit():
+      guess = int(guess)
+      attempt_count += 1
+      attempt_record.append(guess)
 
-    if guess > target_num:
-      print("Too high!")
-    elif guess < target_num:
-      print("Too low!")
+      if guess > target_num:
+        print("Too high!")
+      elif guess < target_num:
+        print("Too low!")
+      else:
+        print("Congratulations! You got it in", attempt_count, "attempts.")
     else:
-      print("Congratulations! You got it in", attempt_count, "attempts.")
-  else:
-    print("Enter a valid number")
+      print("Enter a valid number")
 
 play = input("Play again? yes/no: ")
   
