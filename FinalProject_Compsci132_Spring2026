@@ -18,9 +18,9 @@ attempt_record = []
 guess = None
 
 while guess != target_num: 
-  guess = int(guess)
   guess = input("Enter your guess: ")
   if guess.isdigit():
+    guess = int(guess)
     attempt_count += 1
     attempt_record.append(guess)
 
