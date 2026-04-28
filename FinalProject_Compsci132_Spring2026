@@ -12,6 +12,7 @@ def final_project():
       maximum_num = 200
     else:
       print("Invalid Difficulty")
+      continue
 
     target_num = random.randint(1, maximum_num)
     attempt_count = 0
