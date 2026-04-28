@@ -1,0 +1,6 @@
+import random
+play = "yes"
+while play == "yes"
+  print("\nChoose difficulty: easy/medium/hard")
+  difficulty = input("Enter difficulty: ")
+  
