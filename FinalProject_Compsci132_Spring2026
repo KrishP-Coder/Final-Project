@@ -5,10 +5,12 @@ while play == "yes":
   difficulty = input("Enter difficulty: ")
   if difficulty == "easy":
     maximum_num = 50
-  if difficulty == "medium":
+  elif difficulty == "medium":
     maximum_num = 100
-  if difficulty == "hard":
+  elif difficulty == "hard":
     maximum_num = 200
+  else:
+    print("Invalid Difficulty")
 
 target_num = random.randint(1, maximum_num)
 attempt_count = 0
@@ -16,6 +18,7 @@ attempt_record = []
 guess = None
 
 while guess != target_num: 
+  guess = int(guess)
   guess = input("Enter your guess: ")
   if guess.isdigit():
     attempt_count += 1
@@ -26,7 +29,7 @@ while guess != target_num:
     elif guess < target_num:
       print("Too low!")
     else:
-      print("Correct! You got it in", attempt_count, "attempts.")
+      print("Congratulations! You got it in", attempt_count, "attempts.")
   else:
     print("Enter a valid number")
 
