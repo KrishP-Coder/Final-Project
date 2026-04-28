@@ -1,37 +1,38 @@
 import random
-play = "yes"
-while play == "yes":
-  print("\nChoose difficulty: easy/medium/hard")
-  difficulty = input("Enter difficulty: ")
-  if difficulty == "easy":
-    maximum_num = 50
-  elif difficulty == "medium":
-    maximum_num = 100
-  elif difficulty == "hard":
-    maximum_num = 200
-  else:
-    print("Invalid Difficulty")
-
-  target_num = random.randint(1, maximum_num)
-  attempt_count = 0
-  attempt_record = []
-  guess = None
-
-  while guess != target_num: 
-    guess = input("Enter your guess: ")
-    if guess.isdigit():
-      guess = int(guess)
-      attempt_count += 1
-      attempt_record.append(guess)
-
-      if guess > target_num:
-        print("Too high!")
-      elif guess < target_num:
-        print("Too low!")
-      else:
-        print("Congratulations! You got it in", attempt_count, "attempts.")
+def final_project():
+  play = "yes"
+  while play == "yes":
+    print("\nChoose difficulty: easy/medium/hard")
+    difficulty = input("Enter difficulty: ")
+    if difficulty == "easy":
+      maximum_num = 50
+    elif difficulty == "medium":
+      maximum_num = 100
+    elif difficulty == "hard":
+      maximum_num = 200
     else:
-      print("Enter a valid number")
+      print("Invalid Difficulty")
 
-  play = input("Play again? yes/no: ")
+    target_num = random.randint(1, maximum_num)
+    attempt_count = 0
+    attempt_record = []
+    guess = None
+
+    while guess != target_num: 
+      guess = input("Enter your guess: ")
+      if guess.isdigit():
+        guess = int(guess)
+        attempt_count += 1
+        attempt_record.append(guess)
+
+        if guess > target_num:
+          print("Too high!")
+        elif guess < target_num:
+          print("Too low!")
+        else:
+          print("Congratulations! You got it in", attempt_count, "attempts.")
+      else:
+        print("Enter a valid number")
+
+    play = input("Play again? yes/no: ")
   
