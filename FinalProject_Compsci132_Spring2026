@@ -19,7 +19,7 @@ def final_project():
     guess = None
     maximum_attempts = 10
 
-    while guess != target_num and attempt_count < max_attempts: 
+    while guess != target_num and attempt_count < maximum_attempts: 
       guess = input("Enter your guess: ")
       if guess.isdigit():
         guess = int(guess)
