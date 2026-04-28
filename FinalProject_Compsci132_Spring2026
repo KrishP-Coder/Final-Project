@@ -32,6 +32,7 @@ def final_project():
           print("Too low!")
         else:
           print("Congratulations! You got it in", attempt_count, "attempts.")
+          print("Your guesses:", attempt_record)
       else:
         print("Enter a valid number")
 
